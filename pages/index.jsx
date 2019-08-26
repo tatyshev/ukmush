@@ -43,6 +43,7 @@ const TRANSLIT = {
   ю: 'u',
   я: 'ya',
   й: 'ii',
+  ө: 'o',
 };
 
 

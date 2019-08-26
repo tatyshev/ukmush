@@ -42,6 +42,7 @@ const TRANSLIT = {
   э: 'e',
   ю: 'u',
   я: 'ya',
+  й: 'ii',
 };
 
 

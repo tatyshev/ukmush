@@ -58,4 +58,11 @@ body {
   padding: 10px;
   font-size: 0.9em;
   line-height: 1.3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.b-home_note {
+  text-transform: capitalize;
 }

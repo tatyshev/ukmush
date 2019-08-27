@@ -61,6 +61,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  font-style: italic;
 }
 
 .b-home_note::first-letter {

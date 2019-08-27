@@ -63,6 +63,6 @@ body {
   justify-content: center;
 }
 
-.b-home_note {
-  text-transform: capitalize;
+.b-home_note::first-letter {
+  text-transform: uppercase;
 }

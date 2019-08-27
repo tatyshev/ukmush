@@ -8,7 +8,7 @@ module.exports = (req, res) => {
   res.json({
     word: {
       name: word.name,
-      notes: word.notes.slice(0, 10),
+      notes: word.notes.slice(0, 5),
     },
     max: len,
   });

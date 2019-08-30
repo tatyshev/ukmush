@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react/no-array-index-key */
 
+import Head from 'next/head';
 import React from 'react';
 import fetch from 'isomorphic-unfetch';
 import 'normalize.css';
@@ -51,9 +52,19 @@ function toLatin(str) {
   return str.split('').map((i) => TRANSLIT[i] || i).join('');
 }
 
+function formatNote(note) {
+  return note
+    .replace(';', '')
+    .replace('&quot;', '"');
+}
+
 function Home({ word }) {
   return (
     <div className="b-home">
+      <Head>
+        <title>Укмуш</title>
+      </Head>
+
       <div className="b-home__container">
         <div className="b-home__name">
           <div className="b-home__name-main">{word.name}</div>
@@ -61,7 +72,7 @@ function Home({ word }) {
         </div>
         <div className="b-home__notes">
           {word.notes.map((note, i) => (
-            <div key={i} className="b-home_note">{note}</div>
+            <div key={i} className="b-home_note">{formatNote(note)}</div>
           ))}
         </div>
       </div>

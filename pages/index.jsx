@@ -54,8 +54,8 @@ function toLatin(str) {
 
 function formatNote(note) {
   return note
-    .replace(';', '')
-    .replace('&quot;', '"');
+    .replace(/;/ig, '')
+    .replace(/&quot;/ig, '"');
 }
 
 function Home({ word }) {

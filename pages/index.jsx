@@ -53,7 +53,7 @@ function toLatin(str) {
   const result = str.split('').map((i) => TRANSLIT[i] || i).join('');
 
   return result
-    .replace(/(oo)+/ig, 'oo');
+    .replace(/o{3,}/ig, 'oo');
 }
 
 function formatNote(note) {

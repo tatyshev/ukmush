@@ -50,7 +50,10 @@ const TRANSLIT = {
 
 
 function toLatin(str) {
-  return str.split('').map((i) => TRANSLIT[i] || i).join('');
+  const result = str.split('').map((i) => TRANSLIT[i] || i).join('');
+
+  return result
+    .replace(/(oo)+/ig, 'oo');
 }
 
 function formatNote(note) {
